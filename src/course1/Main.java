@@ -41,10 +41,11 @@ public class Main {
     public static double getAverageSalary(Employee[] employees) {
         int sum = 0;
         for (Employee e : employees) {
-            sum += e.salary / employees.length;
+            sum += e.salary;
         }
-        System.out.println(sum);
-        return sum;
+        double averageSalary = (double) sum / employees.length;
+        System.out.println(averageSalary);
+        return averageSalary;
     }
 
 
