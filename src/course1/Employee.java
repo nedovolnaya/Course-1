@@ -6,10 +6,15 @@ public class Employee {
     int salary;
     int id;
 
+    static int counter = 1;
+
+
     public Employee(String name, int department, int salary) {
         this.name = name;
         this.department = department;
         this.salary = salary;
+        this.id = counter;
+        counter++;
     }
 
 
@@ -35,6 +40,16 @@ public class Employee {
 
     public void setSalary(int salary) {
         this.salary = salary;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", department=" + department +
+                ", salary=" + salary +
+                ", id=" + id +
+                '}';
     }
 }
 
